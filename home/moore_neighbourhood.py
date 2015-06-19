@@ -4,7 +4,7 @@ def count_neighbours(grid, row, col):
         for j in range(col-1, col+2):
             if i >=0 and i <= len(grid)-1 and j >= 0 and j <= len(grid[0])-1:
                 f += grid[i][j]
-    f = f - grid[row][col]
+    f -= grid[row][col]
     return f
 
 if __name__ == '__main__':
