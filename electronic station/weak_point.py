@@ -1,10 +1,6 @@
 def weak_point(matrix):
-    row = []
-    col = []
-    for i in matrix:
-        row.append(sum(i))
-    for i in zip(*matrix):
-        col.append(sum(i))
+    row = [sum(x) for x in matrix]
+    col = [sum(x) for x in zip(*matrix)]
     return [row.index(min(row)), col.index(min(col))]
 
 if __name__ == '__main__':
